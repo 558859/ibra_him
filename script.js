@@ -203,4 +203,25 @@ $(document).ready(function () {
     });
   });
 
+// ...dans $(document).ready(function () { ...
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '/api/contact',
+      method: 'POST',
+      data: {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+      },
+      success: function() {
+        $('#form-message').html('<div class="alert alert-success">Merci, votre inscription a bien été envoyée !</div>');
+        $('#contactForm')[0].reset();
+      },
+      error: function() {
+        $('#form-message').html('<div class="alert alert-danger">Erreur lors de l\'envoi. Essayez encore.</div>');
+      }
+    });
+  });
+
 // ...existing code...

@@ -1,30 +1,34 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-app.use(express.static("public")); // Place tes fichiers HTML/CSS/JS dans un dossier "public"
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Remplace par tes infos Gmail ou autre SMTP
+// Sert les fichiers statiques (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, "public")));
+
+// Configure nodemailer (exemple avec Gmail)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "ton.email@gmail.com", // remplace par ton email
-    pass: "mot_de_passe_application" // mot de passe d'application Gmail
+    user: "TON_EMAIL@gmail.com", // Mets ton email ici
+    pass: "TON_MDP_APPLICATION"  // Mets ton mot de passe d'application ici
   }
 });
 
+// Route pour le formulaire
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
   try {
     await transporter.sendMail({
-      from: `"Portfolio" <ton.email@gmail.com>`,
-      to: "ton.email@gmail.com", // où tu veux recevoir les messages
+      from: `"Portfolio" <TON_EMAIL@gmail.com>`,
+      to: "TON_EMAIL@gmail.com", // Où tu veux recevoir les messages
       subject: "Nouvelle inscription portfolio",
       text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `<p><b>Nom:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Message:</b><br>${message}</p>`
@@ -35,6 +39,7 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+// Lance le serveur
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
