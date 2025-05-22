@@ -179,3 +179,28 @@ $(document).ready(function () {
   }
 
 });
+
+// ...existing code inside $(document).ready(function () { ... )
+
+  // Gestion de l'envoi du formulaire de contact
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '/api/contact', // L'URL de ton backend Node.js
+      method: 'POST',
+      data: {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+      },
+      success: function() {
+        $('#form-message').html('<div class="alert alert-success">Merci, votre inscription a bien été envoyée !</div>');
+        $('#contactForm')[0].reset();
+      },
+      error: function() {
+        $('#form-message').html('<div class="alert alert-danger">Erreur lors de l\'envoi. Essayez encore.</div>');
+      }
+    });
+  });
+
+// ...existing code...
