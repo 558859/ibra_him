@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - [Your Name]</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link (Bootstrap JS bundle includes Popper, so jQuery might not be strictly needed for Bootstrap components, but good to have if your custom scripts use it) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
+      <div class="container-fluid px-lg-5 px-3">
+        <a class="navbar-brand fw-bold fs-2" href="#home" style="color: #3f396d"
+          >IBRAHIM</a
+        >
+        <button
+          class="navbar-toggler nav-menu"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-lg-4 gap-2" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+             <li class="nav-item d-lg-none"> <!-- Show contact in dropdown on small screens -->
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#contact" class="c-btn ms-lg-4 py-2 px-4 rounded-pill d-none d-lg-block text-white text-decoration-none">Contact</a>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home py-5" id="home">
+      <div class="container">
+        <div class="row justify-content-evenly align-items-center">
+          <div class="col-lg-6 col-md-8 col-10 text-center text-lg-start" data-aos="slide-right">
+            <h2 style="color: #3f396d">
+              Hello! I Am <br /><span class="c-orange">[Your Name]</span>
+            </h2>
+            <p class="text-muted lead">
+              I'm a [Your Role/Title, e.g., Passionate Web Developer] with experience in creating responsive websites and applications.
+              <!-- Add your brief intro here -->
+            </p>
+            <a href="#contact" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none">
+              Hire Me
+            </a>
+            <a href="#portfolio" class="link ms-4">See My Work</a>
+          </div>
+          <div class="col-lg-4 col-md-6 d-none d-lg-block mt-4 mt-lg-0" data-aos="fade-in">
+            <img src="images/banner2.jpg.jpeg" class="img-fluid rounded-circle shadow" alt="Your Profile Picture" />
+            <!-- Replace images/banner-01.webp with your photo -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise py-5 bg-light" id="service">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <small class="text-uppercase c-orange fw-bold">My Expertise</small>
+          <h3 class="fw-bold" style="color: #3f396d;">
+            Provide Wide Range of <br />
+            Digital Services
+          </h3>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
+              <div class="service-icon mb-3">
+                <img
+                  src="images/background.jpg.jpeg"
+                  class="img-fluid"
+                  style="max-width: 80px;"
+                  alt="Web Design Icon"
+                />
+              </div>
+              <div class="content">
+                <h4 class="fw-semibold" style="color: #3f396d;">Web Design</h4>
+                <p class="text-muted">
+                  Crafting visually appealing and user-friendly interfaces.
+                  <!-- Your description here -->
+                </p>
+                <a href="#" class="link">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
+              <div class="service-icon mb-3">
+                <img
+                  src="images/service-icon2.png"
+                  class="img-fluid"
+                  style="max-width: 80px;"
+                  alt="Web Development Icon"
+                />
+              </div>
+              <div class="content">
+                <h4 class="fw-semibold" style="color: #3f396d;">Web Development</h4>
+                <p class="text-muted">
+                  Building robust and scalable web applications.
+                  <!-- Your description here -->
+                </p>
+                <a href="#" class="link">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
+              <div class="service-icon mb-3">
+                <img
+                  src="images/banner.png (2).jpeg"
+                  class="img-fluid"
+                  style="max-width: 80px;"
+                  alt="Debugging Icon"
+                />
+              </div>
+              <div class="content">
+                <h4 class="fw-semibold" style="color: #3f396d;">Problem Solving</h4>
+                <p class="text-muted">
+                  Efficiently debugging and optimizing code for performance.
+                  <!-- Your description here -->
+                </p>
+                <a href="#" class="link">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends here -->
+
+    <!-- skill section starts -->
+    <section class="skill py-5" id="about">
+      <div class="container">
+        <div class="row justify-content-evenly align-items-center">
+          <div class="col-lg-6 skill-with-progress" data-aos="slide-right">
+            <div class="row justify-content-center text-center g-4">
+              <div class="col-sm-6 col-10">
+                <div class="progress-card">
+                  <div class="circular-progress html-css" data-value="90">
+                    <span class="progress-value">0%</span>
+                  </div>
+                  <span class="text fw-semibold mt-2 d-block">HTML & CSS</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-10">
+                <div class="progress-card">
+                  <div class="circular-progress javascript" data-value="80">
+                    <span class="progress-value">0%</span>
+                  </div>
+                  <span class="text fw-semibold mt-2 d-block">JavaScript</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-10 mt-4">
+                <div class="progress-card">
+                  <div class="circular-progress php" data-value="75"> <!-- Example: Changed to 'Python' or your skill -->
+                    <span class="progress-value">0%</span>
+                  </div>
+                  <span class="text fw-semibold mt-2 d-block">Python</span> <!-- Example: Changed to 'Python' or your skill -->
+                </div>
+              </div>
+              <div class="col-sm-6 col-10 mt-4">
+                <div class="progress-card">
+                  <div class="circular-progress reactjs" data-value="70"> <!-- Example: Changed to 'Node.js' or your skill -->
+                    <span class="progress-value">0%</span>
+                  </div>
+                  <span class="text fw-semibold mt-2 d-block">Node.js</span> <!-- Example: Changed to 'Node.js' or your skill -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-10 mt-5 mt-lg-0 skill-detail" data-aos="slide-left">
+            <div class="heading">
+              <small class="text-uppercase c-orange fw-bold">My Skills & About Me</small>
+              <h3 class="fw-bold" style="color: #3f396d;">Crafting Digital Experiences</h3>
+              <p class="text-muted">
+                A dedicated and results-oriented [Your Profession] with a strong foundation in web technologies and a passion for continuous learning.
+                <!-- Add more about yourself here -->
+              </p>
+              <p class="text-muted">
+                I enjoy tackling complex problems and transforming ideas into functional and elegant digital solutions.
+                <!-- Add more about yourself here -->
+              </p>
+              <a
+                href="MyResume.pdf" 
+                download="[YourName]_CV.pdf"
+                class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none"
+                >Download CV</a
+              >
+              <!-- Replace MyResume.pdf with your actual resume file name -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end here -->
+
+    <!-- portfolio section starts here -->
+    <section class="portfolio py-5 bg-light" id="portfolio">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <small class="text-uppercase c-orange fw-bold">Creative Work</small>
+          <h3 class="fw-bold" style="color: #3f396d;">Check My Portfolio</h3>
+        </div>
+
+        <div id="myBtnContainer" class="text-center mb-4">
+          <button class="filter-item btn btn-outline-primary active" data-filter="all">All</button>
+          <button class="filter-item btn btn-outline-primary" data-filter="game">Game</button>
+          <button class="filter-item btn btn-outline-primary" data-filter="webapp">Web App</button>
+          <button class="filter-item btn btn-outline-primary" data-filter="website">Website</button>
+          <!-- Add or remove categories as needed -->
+        </div>
+        <div class="portfolio-body">
+          <div class="row justify-content-center g-4">
+            <!-- Project 1 -->
+            <div class="post col-lg-4 col-md-6 game all" data-aos="fade-up">
+              <div class="card shadow-sm">
+                <img src="images/project-2048game.png" class="card-img-top" alt="2048 Game Project" />
+                <!-- Replace with your project image -->
+                <div class="card-body text-center">
+                  <h4 class="card-title fw-semibold" style="color: #3f396d;">2048 Game Clone</h4>
+                  <span class="badge bg-secondary">HTML</span>
+                  <span class="badge bg-secondary">CSS</span>
+                  <span class="badge bg-secondary mb-2">JavaScript</span><br />
+                  <a href="#" class="link mt-2 d-inline-block">View Project</a> <!-- Add link to project -->
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="post col-lg-4 col-md-6 website all" data-aos="fade-up" data-aos-delay="100">
+              <div class="card shadow-sm">
+                <img src="images/project-currency-converter.png" class="card-img-top" alt="Currency Converter Project" />
+                <!-- Replace with your project image -->
+                <div class="card-body text-center">
+                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Currency Converter</h4>
+                   <span class="badge bg-secondary">HTML</span>
+                   <span class="badge bg-secondary">CSS</span>
+                   <span class="badge bg-secondary mb-2">JavaScript</span><br />
+                  <a href="#" class="link mt-2 d-inline-block">View Project</a> <!-- Add link to project -->
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="post col-lg-4 col-md-6 webapp all" data-aos="fade-up" data-aos-delay="200">
+              <div class="card shadow-sm">
+                <img src="images/project-dictionary.png" class="card-img-top" alt="Dictionary App Project" />
+                <!-- Replace with your project image -->
+                <div class="card-body text-center">
+                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Dictionary App</h4>
+                   <span class="badge bg-secondary">API</span>
+                   <span class="badge bg-secondary">JavaScript</span>
+                   <span class="badge bg-secondary mb-2">Bootstrap</span><br />
+                  <a href="#" class="link mt-2 d-inline-block">View Project</a> <!-- Add link to project -->
+                </div>
+              </div>
+            </div>
+            <!-- Add more projects following the same structure -->
+            <!-- Example Project 4 (initially hidden by filter if you add specific class) -->
+            <div class="post col-lg-4 col-md-6 website all" data-aos="fade-up">
+              <div class="card shadow-sm">
+                <img src="images/project-placeholder.png" class="card-img-top" alt="Another Website Project" />
+                <div class="card-body text-center">
+                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Client Portfolio Site</h4>
+                  <span class="badge bg-secondary">WordPress</span>
+                  <span class="badge bg-secondary">PHP</span>
+                  <span class="badge bg-secondary mb-2">Custom Theme</span><br />
+                  <a href="#" class="link mt-2 d-inline-block">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section ends here -->
+
+    <!-- testimonial section starts  -->
+    <section class="testimonial py-5" id="testimonial">
+      <div class="container">
+        <div class="row justify-content-evenly align-items-center">
+          <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="slide-right">
+            <img src="images/banner2.jpg.jpeg" class="img-fluid" alt="Testimonial illustration" />
+             <!-- Replace with a relevant image or remove -->
+          </div>
+          <div class="col-lg-7 col-md-10" data-aos="slide-left">
+            <div class="heading mb-4 text-center text-lg-start">
+              <small class="text-uppercase c-orange fw-bold">Testimonials</small>
+              <h3 class="fw-bold" style="color: #3f396d;">Happy Clients Feedback</h3>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner bg-light p-4 p-md-5 rounded shadow-sm">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote fs-1 c-orange"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "[Client's testimonial quote here. Example: Working with [Your Name] was a fantastic experience. They delivered excellent results on time.]"
+                      </p>
+                      <h4 class="fw-semibold" style="color: #3f396d;">Client Name 1</h4>
+                      <small class="fs-6 text-muted">CEO of Company X</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-2 text-center">
+                       <i class="bi bi-quote fs-1 c-orange"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "[Another client's testimonial quote. Example: Highly professional and skilled. I recommend [Your Name] for any web project.]"
+                      </p>
+                      <h4 class="fw-semibold" style="color: #3f396d;">Client Name 2</h4>
+                      <small class="fs-6 text-muted">Project Manager at Org Y</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add more testimonials here -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial ends here -->
+
+    <!-- blog section starts -->
+    <section class="blog py-5 bg-light" id="blog">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <small class="text-uppercase c-orange fw-bold">Latest News</small>
+          <h3 class="fw-bold" style="color: #3f396d;">Blog & Articles</h3>
+        </div>
+        <div class="row justify-content-center g-4" data-aos="fade-up">
+          <!-- Blog Post 1 -->
+          <div class="blogpost col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="images/blog-post1.png" class="card-img-top" alt="Blog post image 1" />
+              <!-- Replace with your blog image -->
+              <div class="card-body d-flex flex-column">
+                <small class="text-muted">By [Your Name] <span class="ms-3">Mar 8, 2024</span></small>
+                <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal1">My Journey into Web Development</a></h4>
+                <p class="text-muted">
+                  A brief story about how I started and what fuels my passion for coding...
+                  <!-- Short excerpt -->
+                </p>
+                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="blogpost col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="images/blog-post2.png" class="card-img-top" alt="Blog post image 2" />
+              <!-- Replace with your blog image -->
+              <div class="card-body d-flex flex-column">
+                <small class="text-muted">By [Your Name] <span class="ms-3">Apr 15, 2024</span></small>
+                 <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal2">Top 5 JavaScript Frameworks in 2024</a></h4>
+                <p class="text-muted">
+                  An overview of popular JavaScript frameworks and their use cases...
+                  <!-- Short excerpt -->
+                </p>
+                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div class="blogpost col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img src="images/blog-post3.png" class="card-img-top" alt="Blog post image 3" />
+              <!-- Replace with your blog image -->
+              <div class="card-body d-flex flex-column">
+                <small class="text-muted">By [Your Name] <span class="ms-3">May 20, 2024</span></small>
+                 <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal3">The Importance of Responsive Design</a></h4>
+                <p class="text-muted">
+                  Why every website needs to be mobile-friendly and how to achieve it...
+                  <!-- Short excerpt -->
+                </p>
+                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog section ends here -->
+
+    <!-- Modals for Blog Posts -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogModal1Label" style="color: #3f396d;">My Journey into Web Development</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/blog-post1.png" class="img-fluid rounded mb-3" alt="Blog post image 1">
+            <small class="text-muted">By [Your Name] | Mar 8, 2024</small>
+            <div class="social-links mt-2 mb-3">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Share</a>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Share</a>
+              <!-- Add more social share buttons as needed -->
+            </div>
+            <p>This is where the full content of your first blog post will go. You can write multiple paragraphs about your journey, the challenges you faced, and what you've learned. Make it engaging and personal!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eros a tellus auctor, nec suscipit nunc dignissim. Ut suscipit gravida augue sed elementum. Sed sed luctus nisl. Donec scelerisque nisi in sodales mattis. Vestibulum suscipit odio ac enim blandit sollicitudin.</p>
+            <!-- Add more content -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+     <div class="modal fade" id="blogModal2" tabindex="-1" aria-labelledby="blogModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogModal2Label" style="color: #3f396d;">Top 5 JavaScript Frameworks in 2024</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/blog-post2.png" class="img-fluid rounded mb-3" alt="Blog post image 2">
+            <small class="text-muted">By [Your Name] | Apr 15, 2024</small>
+             <div class="social-links mt-2 mb-3">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Share</a>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Share</a>
+            </div>
+            <p>Full content for your second blog post. Discuss React, Vue, Angular, Svelte, etc. Provide pros and cons, and your personal opinions or experiences if any.</p>
+            <p>Aliquam ultrices sem quis urna placerat interdum. Etiam rutrum, quam sagittis tristique mollis, libero arcu scelerisque erat, eget tincidunt eros diam quis nunc. Sed vitae feugiat magna. Integer quis justo nec arcu laoreet facilisis.</p>
+            <!-- Add more content -->
+          </div>
+           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogModal3Label" style="color: #3f396d;">The Importance of Responsive Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/blog-post3.png" class="img-fluid rounded mb-3" alt="Blog post image 3">
+            <small class="text-muted">By [Your Name] | May 20, 2024</small>
+            <div class="social-links mt-2 mb-3">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Share</a>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Share</a>
+            </div>
+            <p>Full content for your third blog post. Explain what responsive design is, why it's crucial for user experience and SEO. Include tips or examples.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+            <!-- Add more content -->
+          </div>
+           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <small class="text-uppercase c-orange fw-bold">Get in Touch</small>
+          <h3 class="fw-bold" style="color: #3f396d;">Any Questions? Feel Free to Contact</h3>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-lg-5 col-md-6 contact-details" data-aos="slide-right">
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-geo-alt-fill fs-4 c-orange me-3"></i>
+              <p class="mb-0">[Your City, Country]<br>e.g., 121 King Street Melbourne, 3000, Australia</p>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-telephone-fill fs-4 c-orange me-3"></i>
+              <p class="mb-0">[Your Phone Number]<br>e.g., +01 123 456 7890</p>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-send-fill fs-4 c-orange me-3"></i>
+              <p class="mb-0">[Your Email Address]<br>e.g., your.email@example.com</p>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-globe-americas fs-4 c-orange me-3"></i>
+              <p class="mb-0">[Your Website (if different)]<br>e.g., yourwebsite.com</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mt-4 mt-md-0" data-aos="slide-left">
+            <!-- Replace with your form provider or backend endpoint -->
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+              <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Your E-mail" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" />
+              </div>
+              <div class="mb-3">
+                <textarea name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="c-btn h-btn py-3 px-5 rounded-pill text-white text-decoration-none">
+                Send Message
+              </button>
+            </form>
+             <small class="d-block mt-2 text-muted">This form uses Formspree. Replace `YOUR_FORMSPREE_ID` with your own.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends here -->
+
+    <!-- Back to top button -->
+    <button
+      type="button"
+      class="btn btn-lg rounded-pill"
+      id="btn-back-to-top"
+      style="background-color: var(--orange-color); color: white;"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center py-5" style="background-color: #3f396d; color: #f0f0f0;">
+      <div class="container">
+        <h3 class="text-white pt-4" data-aos="fade-up">[Your Name]</h3>
+        <div class="link-group mt-4" data-aos="fade-up">
+          <a href="#home" class="text-white text-decoration-none mx-2">Home</a>
+          <span class="text-white-50">|</span>
+          <a href="#about" class="text-white text-decoration-none mx-2">About</a>
+          <span class="text-white-50">|</span>
+          <a href="#service" class="text-white text-decoration-none mx-2">Service</a>
+          <span class="text-white-50">|</span>
+          <a href="#portfolio" class="text-white text-decoration-none mx-2">Portfolio</a>
+          <span class="text-white-50">|</span>
+          <a href="#blog" class="text-white text-decoration-none mx-2">Blog</a>
+          <span class="text-white-50">|</span>
+          <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
+        </div>
+        <div class="social-links mt-4" data-aos="fade-up">
+          <!-- Replace # with your actual social media links -->
+          <a href="#" class="btn btn-outline-light rounded-pill me-2 footer-social-btn"><i class="bi bi-dribbble"></i></a>
+          <a href="#" class="btn btn-outline-light rounded-pill me-2 footer-social-btn"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="btn btn-outline-light rounded-pill me-2 footer-social-btn"><i class="bi bi-behance"></i></a>
+          <a href="#" class="btn btn-outline-light rounded-pill footer-social-btn"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <hr class="my-4" style="border-color: rgba(255,255,255,0.2);" />
+        <p class="mb-0">&copy; Copyright <span id="currentYear"></span> [Your Name] | All Rights Reserved.</p>
+        <p class="text-white-50 small mt-1">Design inspired by original template.</p>
+      </div>
+    </footer>
+    <!-- footer section ends here -->
+
+    <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://formspree.io/f/xrbqdran"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50, // offset (in px) from the original trigger point
+        once: true // whether animation should happen only once - while scrolling down
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="script.js"></script>
+    
+  </body>
+</html>
