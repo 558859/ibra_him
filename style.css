@@ -1,16 +1,14 @@
-/* style.css */
-
 /* Google Font */
 body {
   font-family: "Josefin Sans", sans-serif;
   line-height: 1.7;
-  color: #555; /* Default text color */
+  color: #555;
 }
 
 :root {
   --primary-dark-color: #3f396d;
-  --orange-color: #fd7e14; /* Bootstrap's orange, or choose your own */
-  --light-bg-color: #f8f9fa; /* Bootstrap's light gray */
+  --orange-color: #fd7e14;
+  --light-bg-color: #f8f9fa;
 }
 
 /* Helper Classes */
@@ -31,12 +29,11 @@ body {
   border: 2px solid var(--orange-color);
 }
 
-.h-btn:hover, .h-btn:focus { /* Home button style */
-    background-color: var(--primary-dark-color);
-    border-color: var(--primary-dark-color);
-    color: white;
+.h-btn:hover, .h-btn:focus {
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+  color: white;
 }
-
 
 .link {
   color: var(--orange-color);
@@ -62,17 +59,16 @@ body {
 #navbar-top .nav-link.active {
   color: var(--orange-color);
 }
-.nav-menu i { /* Hamburger icon */
-    font-size: 1.8rem;
-    color: var(--primary-dark-color);
+.nav-menu i {
+  font-size: 1.8rem;
+  color: var(--primary-dark-color);
 }
 .navbar-toggler {
-    border: none;
+  border: none;
 }
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
-
 
 /* Home Section */
 .home {
@@ -81,13 +77,13 @@ body {
   align-items: center;
 }
 .home h2 {
-  font-size: 2.5rem; /* Responsive font size can be added */
+  font-size: 2.5rem;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-    .home h2 {
-        font-size: 3.5rem;
-    }
+  .home h2 {
+    font-size: 3.5rem;
+  }
 }
 
 /* Expertise / Service Section */
@@ -106,7 +102,6 @@ body {
   max-width: 70px;
 }
 
-
 /* Skill Section / About */
 .skill {
   padding-top: 80px;
@@ -120,7 +115,7 @@ body {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background: conic-gradient(var(--orange-color) 0deg, #ededed 0deg); /* Initial state */
+  background: conic-gradient(var(--orange-color) 0deg, #ededed 0deg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,12 +158,12 @@ body {
   border-color: var(--orange-color);
 }
 .filter-item.btn:not(.active) {
-    color: var(--orange-color);
-    border-color: var(--orange-color);
+  color: var(--orange-color);
+  border-color: var(--orange-color);
 }
 .filter-item.btn:not(.active):hover {
-    background-color: var(--orange-color);
-    color: white;
+  background-color: var(--orange-color);
+  color: white;
 }
 
 .post .card {
@@ -180,13 +175,12 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .post .card-img-top {
-  height: 250px; /* Adjust as needed */
+  height: 250px;
   object-fit: cover;
 }
 .post .card-title a:hover {
-    color: var(--orange-color) !important;
+  color: var(--orange-color) !important;
 }
-
 
 /* Testimonial Section */
 .testimonial {
@@ -194,30 +188,29 @@ body {
   padding-bottom: 80px;
 }
 .testimonial .carousel-inner {
-    min-height: 250px; /* Adjust as needed */
-    display: flex;
-    align-items: center;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
 }
 .testimonial .carousel-control-prev-icon,
 .testimonial .carousel-control-next-icon {
-    background-color: var(--primary-dark-color);
-    border-radius: 50%;
-    padding: 15px; /* Increase padding to make icons smaller relative to bg */
-    background-size: 50% 50%; /* Makes the actual icon smaller */
+  background-color: var(--primary-dark-color);
+  border-radius: 50%;
+  padding: 15px;
+  background-size: 50% 50%;
 }
 .testimonial .carousel-control-prev {
-    left: -25px; /* Adjust for positioning */
+  left: -25px;
 }
 .testimonial .carousel-control-next {
-    right: -25px; /* Adjust for positioning */
+  right: -25px;
 }
 @media (max-width: 767px) {
-    .testimonial .carousel-control-prev,
-    .testimonial .carousel-control-next {
-        display: none; /* Hide on small screens if they overlap too much */
-    }
+  .testimonial .carousel-control-prev,
+  .testimonial .carousel-control-next {
+    display: none;
+  }
 }
-
 
 /* Blog Section */
 .blog {
@@ -232,7 +225,7 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .blogpost .card-img-top {
-  height: 250px; /* Adjust as needed */
+  height: 250px;
   object-fit: cover;
 }
 .blogpost .card-title a {
@@ -242,52 +235,71 @@ body {
   color: var(--orange-color) !important;
 }
 .modal-header {
-    border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 .modal-title {
-    color: var(--primary-dark-color);
-    font-weight: 600;
+  color: var(--primary-dark-color);
+  font-weight: 600;
 }
 .modal-footer {
-    border-top: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
 }
 
 /* Contact Section */
-.contact {
+#contact {
   padding-top: 80px;
   padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
 }
-.contact-details p {
-  color: #444;
+#contact form {
+  width: 350px;
+  margin: 0 auto;
 }
-.contact-form .form-control {
+#contact label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #3f396d;
+}
+#contact input,
+#contact textarea {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
 }
-.contact-form .form-control:focus {
-    border-color: var(--orange-color);
-    box-shadow: 0 0 0 0.25rem rgba(253, 126, 20, 0.25);
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--orange-color);
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(253, 126, 20, 0.15);
 }
-
-/* Back to Top Button */
-#btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none; /* Hidden by default */
-  z-index: 1030; /* Ensure it's above other content */
+#contact button[type="submit"] {
+  background: var(--orange-color);
+  color: #fff;
   border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+  margin: 0 auto;
 }
-#btn-back-to-top:hover {
-    background-color: var(--primary-dark-color) !important;
-    color: white !important;
+#contact button[type="submit"]:hover {
+  background: #e96b00;
 }
-
-
 /* Footer */
 footer {
   background-color: var(--primary-dark-color);
-  color: #f0f0f0; /* Light text color for footer */
+  color: #f0f0f0;
 }
 footer .link-group a {
   transition: color 0.3s ease;
@@ -296,40 +308,41 @@ footer .link-group a:hover {
   color: var(--orange-color) !important;
 }
 .footer-social-btn {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-social-btn:hover {
-    background-color: var(--orange-color) !important;
-    border-color: var(--orange-color) !important;
-    color: white !important;
+  background-color: var(--orange-color) !important;
+  border-color: var(--orange-color) !important;
+  color: white !important;
 }
 
 /* Responsive adjustments */
-@media (max-width: 991.98px) { /* lg breakpoint */
-    #navbar-top .navbar-nav {
-        margin-top: 1rem; /* Add some space when collapsed */
-        text-align: center;
-    }
-    .home {
-        text-align: center;
-    }
+@media (max-width: 991.98px) {
+  #navbar-top .navbar-nav {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .home {
+    text-align: center;
+  }
 }
 
-@media (max-width: 767.98px) { /* md breakpoint */
-    .skill-with-progress .row > div { /* Stack skill circles better on mobile */
-        margin-bottom: 1.5rem;
-    }
-    .contact-details {
-        margin-bottom: 2rem;
-    }
-     .heading h3 {
-        font-size: 1.8rem;
-    }
+@media (max-width: 767.98px) {
+  .skill-with-progress .row > div {
+    margin-bottom: 1.5rem;
+  }
+  .contact-details {
+    margin-bottom: 2rem;
+  }
+  .heading h3 {
+    font-size: 1.8rem;
+  }
 }
+
 /* Dégradé sur la navbar */
 #navbar-top {
   background: linear-gradient(90deg, #ff7e29 0%, #ff7e29 100%) !important;

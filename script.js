@@ -223,5 +223,11 @@ $(document).ready(function () {
       }
     });
   });
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('form-message').textContent = "Message envoyé avec succès !";
+  document.getElementById('form-message').style.color = "green";
+  this.reset();
+});
 
 // ...existing code...
