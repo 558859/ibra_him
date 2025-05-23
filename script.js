@@ -163,3 +163,4 @@ $(document).ready(function () {
   if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
   }
+});
