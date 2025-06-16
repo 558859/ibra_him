@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -6,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IBRAHIM-ATTOUMANI</title>
-<link rel="icon" 
-href="images/istockphoto-1009735714-612x612.jpg">
+
+    <!-- Icône du site (Favicon) CORRIGÉ -->
+    <link rel="icon" type="image/jpeg" href="images/istockphoto-1009735714-612x612.jpg">
+
     <!-- Lien CDN Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -92,6 +93,7 @@ href="images/istockphoto-1009735714-612x612.jpg">
       </div>
     </nav>
     <!-- Fin de la barre de navigation -->
+
     <!-- Section accueil -->
     <section class="home py-5" id="accueil">
       <div class="container">
@@ -103,12 +105,10 @@ href="images/istockphoto-1009735714-612x612.jpg">
             <p class="text-muted lead">
               Développeur web passionné, avec de l'expérience en création de sites modernes et performants.
             </p>
-           <!-- ...existing code... -->
-<a href="#contact" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none mb-3">
-  Me contacter
-</a>
-<a href="#portfolio" class="link ms-4 mt-4 d-inline-block">Voir mes réalisations</a>
-<!-- ...existing code... -->
+            <a href="#contact" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none mb-3">
+              Me contacter
+            </a>
+            <a href="#portfolio" class="link ms-4 mt-4 d-inline-block">Voir mes réalisations</a>
           </div>
           <div class="col-lg-4 col-md-6 d-none d-lg-block mt-4 mt-lg-0" data-aos="fade-in">
             <img src="images/IMG-20250402-WA0041.jpg" class="img-fluid rounded-circle shadow" alt="Photo de profil" />
@@ -213,17 +213,19 @@ href="images/istockphoto-1009735714-612x612.jpg">
                   <span class="text fw-semibold mt-2 d-block">JavaScript</span>
                 </div>
               </div>
+              <!-- CORRIGÉ : classe "python" pour correspondre au texte "Python" -->
               <div class="col-sm-6 col-10 mt-4">
                 <div class="progress-card">
-                  <div class="circular-progress php" data-value="75">
+                  <div class="circular-progress python" data-value="75">
                     <span class="progress-value">0%</span>
                   </div>
                   <span class="text fw-semibold mt-2 d-block">Python</span>
                 </div>
               </div>
+              <!-- CORRIGÉ : classe "nodejs" pour correspondre au texte "Node.js" -->
               <div class="col-sm-6 col-10 mt-4">
                 <div class="progress-card">
-                  <div class="circular-progress reactjs" data-value="70">
+                  <div class="circular-progress nodejs" data-value="70">
                     <span class="progress-value">0%</span>
                   </div>
                   <span class="text fw-semibold mt-2 d-block">Node.js</span>
@@ -299,7 +301,7 @@ href="images/istockphoto-1009735714-612x612.jpg">
             <!-- Projet 3 -->
             <div class="post col-lg-4 col-md-6 webapp all" data-aos="fade-up" data-aos-delay="200">
               <div class="card shadow-sm">
-                <img src="images/WhatsApp Image 2025-05-18 à 18.15.04_d5b99fc7.jpg" class="card-img-top" alt="Application Dictionnaire" />
+                <img src="images/maxresdefault.jpg" class="card-img-top" alt="Application Dictionnaire" />
                 <div class="card-body text-center">
                   <h4 class="card-title fw-semibold" style="color: #3f396d;">Application Dictionnaire</h4>
                    <span class="badge bg-secondary">API</span>
@@ -312,7 +314,7 @@ href="images/istockphoto-1009735714-612x612.jpg">
             <!-- Projet 4 -->
             <div class="post col-lg-4 col-md-6 website all" data-aos="fade-up">
               <div class="card shadow-sm">
-                <img src="images/IMG-20250515-WA0034.jpg" class="card-img-top" alt="Autre projet web" />
+                <img src="images/img1.jpg" class="card-img-top" alt="Autre projet web" />
                 <div class="card-body text-center">
                   <h4 class="card-title fw-semibold" style="color: #3f396d;">Site Portfolio Client</h4>
                   <span class="badge bg-secondary">WordPress</span>
@@ -386,7 +388,6 @@ href="images/istockphoto-1009735714-612x612.jpg">
                     </div>
                   </div>
                 </div>
-                <!-- Ajoutez d'autres témoignages ici -->
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -457,6 +458,7 @@ href="images/istockphoto-1009735714-612x612.jpg">
       </div>
     </section>
     <!-- Fin section blog -->
+
     <!-- Modales pour les articles du blog -->
     <!-- Modal 1 -->
     <div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
@@ -506,43 +508,65 @@ href="images/istockphoto-1009735714-612x612.jpg">
         </div>
       </div>
     </div>
-<!-- Modal 3 -->
-<div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="blogModal3Label" style="color: #3f396d;">L'importance du design responsive</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/il_1080xN.4341389135_on60.jpg" class="img-fluid rounded mb-3" alt="Image article 3">
-        <small class="text-muted">Par Ibrahim | 20 mai 2024</small>
-        <div class="social-links mt-2 mb-3">
-          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Partager</a>
-          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Partager</a>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogModal3Label" style="color: #3f396d;">L'importance du design responsive</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/il_1080xN.4341389135_on60.jpg" class="img-fluid rounded mb-3" alt="Image article 3">
+            <small class="text-muted">Par Ibrahim | 20 mai 2024</small>
+            <div class="social-links mt-2 mb-3">
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Partager</a>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Partager</a>
+            </div>
+            <p>Contenu complet pour votre troisième article. Expliquez ce qu'est le design responsive, pourquoi il est crucial pour l'expérience utilisateur et le SEO. Ajoutez des conseils ou exemples.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
         </div>
-        <p>Contenu complet pour votre troisième article. Expliquez ce qu'est le design responsive, pourquoi il est crucial pour l'expérience utilisateur et le SEO. Ajoutez des conseils ou exemples.</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
-  </div>
-</div>
-    <!-- Exemple de formulaire -->
-<!-- Section contact -->
-<section id="contact">
-  <form id="contactForm" action="https://formspree.io/f/xrbqdran" method="POST">
-    <label for="name">Nom</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Adresse Email</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+    
+    <!-- Section contact ENTIÈREMENT CORRIGÉE -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <small class="text-uppercase c-orange fw-bold">Entrons en contact</small>
+          <h3 class="fw-bold" style="color: #3f396d;">Contactez-moi</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up">
+            <form id="contactForm" action="https://formspree.io/f/xrbqdran" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Votre nom</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Votre adresse email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Votre message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none border-0">
+                  Envoyer le message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Fin section contact -->
 
     <!-- Bouton retour en haut -->
@@ -556,651 +580,29 @@ href="images/istockphoto-1009735714-612x612.jpg">
     </button>
 
    <!-- Pied de page -->
-<footer class="text-center py-5" style="background-color: #3f396d; color: #f0f0f0;">
-  <div class="container">
-    <h3 class="text-white pt-4" data-aos="fade-up">IBRAHIM</h3>
-    <div class="link-group mt-4" data-aos="fade-up">
-      <a href="#accueil" class="text-white text-decoration-none mx-2">Accueil</a>
-      <span class="text-white-50">|</span>
-      <a href="#apropos" class="text-white text-decoration-none mx-2">À propos</a>
-      <span class="text-white-50">|</span>
-      <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
-    </div>
-    <div class="social-links mt-4" data-aos="fade-up">
-      <a href="https://www.linkedin.com/in/TON_PROFIL_LINKEDIN" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.facebook.com/" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/TON_PROFIL_INSTAGRAM" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://wa.me/TON_NUMERO_WHATSAPP_INTERNATIONAL" style="color: rgb(27, 189, 62);" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.youtube.com/channel/TON_ID_CHAINE_YOUTUBE" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill footer-social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
-    </div>
-    <hr class="my-4" style="border-color: rgba(255,255,255,0.2);" />
-    <p class="mb-0"> <span id="currentYear" style="color: rgb(120, 172, 37);"></span> IBRAHIM-ATTOUMANI | Tous droits réservés.</p>
-  </div>
-</footer>
-<!-- Fin pied de page -->
-
-    <!-- Lien CDN Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Lien JS AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // Initialisation de la librairie AOS
-      AOS.init({
-        duration: 1000,
-        offset: 50,
-        once: true
-      });
-    </script>
-    <!-- Fichier JS personnalisé -->
-    <script src="script.js"></script>
-  </body>
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IBRAHIM-ATTOUMANI</title>
-
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMR5VPYRR0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JMR5VPYRR0');
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="icon" 
-href="images/istockphoto-1009735714-612x612.jpg">
-    <!-- Lien CDN Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-
-    <!-- Fichier CSS personnalisé -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Lien Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Lien CDN Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
-
-    <!-- Lien CDN AOS pour les animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Lien CDN jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  </head>
-  <body>
-    <!-- Début de la barre de navigation -->
-    <nav
-      id="navbar-top"
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
-    >
-      <div class="container-fluid px-lg-5 px-3">
-        <a class="navbar-brand fw-bold fs-2" href="#accueil" style="color: #3f396d"
-          >IBRAHIM</a
-        >
-        <button
-          class="navbar-toggler nav-menu"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Basculer la navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-lg-4 gap-2" style="font-size: 1.1rem">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#accueil">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#apropos">À propos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#temoignages">Témoignages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-            <li class="nav-item d-lg-none">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <a href="#contact" class="c-btn ms-lg-4 py-2 px-4 rounded-pill d-none d-lg-block text-white text-decoration-none">Contact</a>
-      </div>
-    </nav>
-    <!-- Fin de la barre de navigation -->
-    <!-- Section accueil -->
-    <section class="home py-5" id="accueil">
+    <footer class="text-center py-5" style="background-color: #3f396d; color: #f0f0f0;">
       <div class="container">
-        <div class="row justify-content-evenly align-items-center">
-          <div class="col-lg-6 col-md-8 col-10 text-center text-lg-start" data-aos="slide-right">
-            <h2 style="color: #3f396d">
-              Bonjour ! Je suis <br /><span class="c-orange">Ibrahim</span>
-            </h2>
-            <p class="text-muted lead">
-              Développeur web passionné, avec de l'expérience en création de sites modernes et performants.
-            </p>
-           <!-- ...existing code... -->
-<a href="#contact" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none mb-3">
-  Me contacter
-</a>
-<a href="#portfolio" class="link ms-4 mt-4 d-inline-block">Voir mes réalisations</a>
-<!-- ...existing code... -->
-          </div>
-          <div class="col-lg-4 col-md-6 d-none d-lg-block mt-4 mt-lg-0" data-aos="fade-in">
-            <img src="images/IMG-20250402-WA0041.jpg" class="img-fluid rounded-circle shadow" alt="Photo de profil" />
-          </div>
+        <h3 class="text-white pt-4" data-aos="fade-up">IBRAHIM</h3>
+        <div class="link-group mt-4" data-aos="fade-up">
+          <a href="#accueil" class="text-white text-decoration-none mx-2">Accueil</a>
+          <span class="text-white-50">|</span>
+          <a href="#apropos" class="text-white text-decoration-none mx-2">À propos</a>
+          <span class="text-white-50">|</span>
+          <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
         </div>
+        <div class="social-links mt-4" data-aos="fade-up">
+          <!-- PENSEZ À REMPLACER CES LIENS PAR VOS PROFILS -->
+          <a href="https://www.linkedin.com/in/TON_PROFIL_LINKEDIN" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.facebook.com/TON_PROFIL_FACEBOOK" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/TON_PROFIL_INSTAGRAM" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/TON_NUMERO_WHATSAPP" style="color: rgb(27, 189, 62);" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.youtube.com/channel/TON_ID_CHAINE_YOUTUBE" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill footer-social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <hr class="my-4" style="border-color: rgba(255,255,255,0.2);" />
+        <p class="mb-0">© <span id="currentYear"></span> IBRAHIM-ATTOUMANI | Tous droits réservés.</p>
       </div>
-    </section>
-    <!-- Fin section accueil -->
-
-    <!-- Section expertise -->
-    <section class="expertise py-5 bg-light" id="services">
-      <div class="container">
-        <div class="heading text-center mb-5">
-          <small class="text-uppercase c-orange fw-bold">Mon expertise</small>
-          <h3 class="fw-bold" style="color: #3f396d;">
-            Une large gamme de <br />
-            services digitaux
-          </h3>
-        </div>
-        <div class="row justify-content-center g-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
-              <div class="service-icon mb-3">
-                <img
-                  src="images/background.jpg.jpeg"
-                  class="img-fluid"
-                  style="max-width: 80px;"
-                  alt="Icône Web Design"
-                />
-              </div>
-              <div class="content">
-                <h4 class="fw-semibold" style="color: #3f396d;">Web Design</h4>
-                <p class="text-muted">
-                  Création d'interfaces attrayantes et intuitives.
-                </p>
-                <a href="#" class="link">En savoir plus</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
-              <div class="service-icon mb-3">
-                <img
-                  src="images/certificate.jpg.jpeg"
-                  class="img-fluid"
-                  style="max-width: 80px;"
-                  alt="Icône Développement Web"
-                />
-              </div>
-              <div class="content">
-                <h4 class="fw-semibold" style="color: #3f396d;">Développement Web</h4>
-                <p class="text-muted">
-                  Création d'applications web robustes et évolutives.
-                </p>
-                <a href="#" class="link">En savoir plus</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card text-center p-4 bg-white shadow-sm rounded">
-              <div class="service-icon mb-3">
-                <img
-                  src="images/banner.png (2).jpeg"
-                  class="img-fluid"
-                  style="max-width: 80px;"
-                  alt="Icône Résolution de problèmes"
-                />
-              </div>
-              <div class="content">
-                <h4 class="fw-semibold" style="color: #3f396d;">Résolution de problèmes</h4>
-                <p class="text-muted">
-                  Débogage et optimisation du code pour de meilleures performances.
-                </p>
-                <a href="#" class="link">En savoir plus</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section expertise -->
-
-    <!-- Section compétences -->
-    <section class="skill py-5" id="apropos">
-      <div class="container">
-        <div class="row justify-content-evenly align-items-center">
-          <div class="col-lg-6 skill-with-progress" data-aos="slide-right">
-            <div class="row justify-content-center text-center g-4">
-              <div class="col-sm-6 col-10">
-                <div class="progress-card">
-                  <div class="circular-progress html-css" data-value="90">
-                    <span class="progress-value">0%</span>
-                  </div>
-                  <span class="text fw-semibold mt-2 d-block">HTML & CSS</span>
-                </div>
-              </div>
-              <div class="col-sm-6 col-10">
-                <div class="progress-card">
-                  <div class="circular-progress javascript" data-value="80">
-                    <span class="progress-value">0%</span>
-                  </div>
-                  <span class="text fw-semibold mt-2 d-block">JavaScript</span>
-                </div>
-              </div>
-              <div class="col-sm-6 col-10 mt-4">
-                <div class="progress-card">
-                  <div class="circular-progress php" data-value="75">
-                    <span class="progress-value">0%</span>
-                  </div>
-                  <span class="text fw-semibold mt-2 d-block">Python</span>
-                </div>
-              </div>
-              <div class="col-sm-6 col-10 mt-4">
-                <div class="progress-card">
-                  <div class="circular-progress reactjs" data-value="70">
-                    <span class="progress-value">0%</span>
-                  </div>
-                  <span class="text fw-semibold mt-2 d-block">Node.js</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-10 mt-5 mt-lg-0 skill-detail" data-aos="slide-left">
-            <div class="heading">
-              <small class="text-uppercase c-orange fw-bold">Mes compétences & À propos</small>
-              <h3 class="fw-bold" style="color: #3f396d;">Créer des expériences digitales</h3>
-              <p class="text-muted">
-                Développeur web motivé et orienté résultats, avec une solide base en technologies web et une passion pour l'apprentissage continu.
-              </p>
-              <p class="text-muted">
-                J'aime relever des défis complexes et transformer des idées en solutions digitales élégantes et fonctionnelles.
-              </p>
-              <a
-                href="MonCV.pdf" 
-                download="Ibrahim_CV.pdf"
-                class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-white text-decoration-none"
-                >Télécharger mon CV</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section compétences -->
-
-    <!-- Section portfolio -->
-    <section class="portfolio py-5 bg-light" id="portfolio">
-      <div class="container">
-        <div class="heading text-center mb-5">
-          <small class="text-uppercase c-orange fw-bold">Travaux créatifs</small>
-          <h3 class="fw-bold" style="color: #3f396d;">Découvrez mon portfolio</h3>
-        </div>
-
-        <div id="myBtnContainer" class="text-center mb-4">
-          <button class="filter-item btn btn-outline-primary active" data-filter="all">Tous</button>
-          <button class="filter-item btn btn-outline-primary" data-filter="game">Jeu</button>
-          <button class="filter-item btn btn-outline-primary" data-filter="webapp">Application Web</button>
-          <button class="filter-item btn btn-outline-primary" data-filter="website">Site Web</button>
-        </div>
-        <div class="portfolio-body">
-          <div class="row justify-content-center g-4">
-            <!-- Projet 1 -->
-            <div class="post col-lg-4 col-md-6 game all" data-aos="fade-up">
-              <div class="card shadow-sm">
-                <img src="images/basketball.png.jpeg" class="card-img-top" alt="Projet 2048" />
-                <div class="card-body text-center">
-                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Clone du jeu 2048</h4>
-                  <span class="badge bg-secondary">HTML</span>
-                  <span class="badge bg-secondary">CSS</span>
-                  <span class="badge bg-secondary mb-2">JavaScript</span><br />
-                  <a href="#" class="link mt-2 d-inline-block">Voir le projet</a>
-                </div>
-              </div>
-            </div>
-            <!-- Projet 2 -->
-            <div class="post col-lg-4 col-md-6 website all" data-aos="fade-up" data-aos-delay="100">
-              <div class="card shadow-sm">
-                <img src="images/banner.png.jpeg" class="card-img-top" alt="Convertisseur de devises" />
-                <div class="card-body text-center">
-                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Convertisseur de devises</h4>
-                   <span class="badge bg-secondary">HTML</span>
-                   <span class="badge bg-secondary">CSS</span>
-                   <span class="badge bg-secondary mb-2">JavaScript</span><br />
-                  <a href="#" class="link mt-2 d-inline-block">Voir le projet</a>
-                </div>
-              </div>
-            </div>
-            <!-- Projet 3 -->
-            <div class="post col-lg-4 col-md-6 webapp all" data-aos="fade-up" data-aos-delay="200">
-              <div class="card shadow-sm">
-                <img src="images/WhatsApp Image 2025-05-18 à 18.15.04_d5b99fc7.jpg" class="card-img-top" alt="Application Dictionnaire" />
-                <div class="card-body text-center">
-                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Application Dictionnaire</h4>
-                   <span class="badge bg-secondary">API</span>
-                   <span class="badge bg-secondary">JavaScript</span>
-                   <span class="badge bg-secondary mb-2">Bootstrap</span><br />
-                  <a href="#" class="link mt-2 d-inline-block">Voir le projet</a>
-                </div>
-              </div>
-            </div>
-            <!-- Projet 4 -->
-            <div class="post col-lg-4 col-md-6 website all" data-aos="fade-up">
-              <div class="card shadow-sm">
-                <img src="images/IMG-20250515-WA0034.jpg" class="card-img-top" alt="Autre projet web" />
-                <div class="card-body text-center">
-                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Site Portfolio Client</h4>
-                  <span class="badge bg-secondary">WordPress</span>
-                  <span class="badge bg-secondary">PHP</span>
-                  <span class="badge bg-secondary mb-2">Thème personnalisé</span><br />
-                  <a href="#" class="link mt-2 d-inline-block">Voir le projet</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section portfolio -->
-
-    <!-- Section témoignages -->
-    <section class="testimonial py-5" id="temoignages">
-      <div class="container">
-        <div class="row justify-content-evenly align-items-center">
-          <div class="col-lg-4 col-md-6 d-none d-lg-block" data-aos="slide-right">
-            <img src="images/banner2.jpg.jpeg" class="img-fluid" alt="Illustration témoignage" />
-          </div>
-          <div class="col-lg-7 col-md-10" data-aos="slide-left">
-            <div class="heading mb-4 text-center text-lg-start">
-              <small class="text-uppercase c-orange fw-bold">Témoignages</small>
-              <h3 class="fw-bold" style="color: #3f396d;">Avis de mes clients</h3>
-            </div>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner bg-light p-4 p-md-5 rounded shadow-sm">
-                <!-- Témoignage 1 -->
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote fs-1 c-orange"></i>
-                    </div>
-                    <div class="col-10">
-                      <div class="stars mb-1">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                      </div>
-                      <p class="text-muted">
-                        "Travailler avec Ibrahim a été une excellente expérience. Il a livré un travail de qualité dans les délais."
-                      </p>
-                      <h4 class="fw-semibold" style="color: #3f396d;">Client 1</h4>
-                      <small class="fs-6 text-muted">Abdallah Bacar</small>
-                    </div>
-                  </div>
-                </div>
-                <!-- Témoignage 2 -->
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote fs-1 c-orange"></i>
-                    </div>
-                    <div class="col-10">
-                      <div class="stars mb-1">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p class="text-muted">
-                        "Très professionnel et compétent. Je recommande Ibrahim pour tout projet web."
-                      </p>
-                      <h4 class="fw-semibold" style="color: #3f396d;">Client 2</h4>
-                      <small class="fs-6 text-muted">Diamond</small>
-                    </div>
-                  </div>
-                </div>
-                <!-- Ajoutez d'autres témoignages ici -->
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Précédent</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Suivant</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section témoignages -->
-
-    <!-- Section blog -->
-    <section class="blog py-5 bg-light" id="blog">
-      <div class="container">
-        <div class="heading text-center mb-5">
-          <small class="text-uppercase c-orange fw-bold">Dernières actualités</small>
-          <h3 class="fw-bold" style="color: #3f396d;">Blog & Articles</h3>
-        </div>
-        <div class="row justify-content-center g-4" data-aos="fade-up">
-          <!-- Article 1 -->
-          <div class="blogpost col-lg-4 col-md-6">
-            <div class="card shadow-sm h-100">
-              <img src="images/istockphoto-1009735714-612x612.jpg" class="card-img-top" alt="Image article 1" />
-              <div class="card-body d-flex flex-column">
-                <small class="text-muted">Par Ibrahim <span class="ms-3">8 mars 2024</span></small>
-                <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal1">Mon parcours dans le développement web</a></h4>
-                <p class="text-muted">
-                  Découvrez comment j'ai débuté et ce qui nourrit ma passion pour le code...
-                </p>
-                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal1">Lire la suite</a>
-              </div>
-            </div>
-          </div>
-          <!-- Article 2 -->
-          <div class="blogpost col-lg-4 col-md-6">
-            <div class="card shadow-sm h-100">
-              <img src="images/Logo-Union-des-Comores.png" class="card-img-top" alt="Image article 2" />
-              <div class="card-body d-flex flex-column">
-                <small class="text-muted">Par Ibrahim <span class="ms-3">15 avril 2024</span></small>
-                 <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal2">Top 5 des frameworks JavaScript en 2024</a></h4>
-                <p class="text-muted">
-                  Un aperçu des frameworks JavaScript populaires et leurs cas d'utilisation...
-                </p>
-                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal2">Lire la suite</a>
-              </div>
-            </div>
-          </div>
-          <!-- Article 3 -->
-          <div class="blogpost col-lg-4 col-md-6">
-            <div class="card shadow-sm h-100">
-              <img src="images/IMG-20250217-WA0004.jpg" class="card-img-top" alt="Image article 3"/>
-              <div class="card-body d-flex flex-column">
-                <small class="text-muted">Par Ibrahim <span class="ms-3">20 mai 2024</span></small>
-                 <h4 class="card-title mt-2"><a href="#" class="text-decoration-none" style="color: #3f396d;" data-bs-toggle="modal" data-bs-target="#blogModal3">L'importance du design responsive</a></h4>
-                <p class="text-muted">
-                  Pourquoi chaque site doit être adapté au mobile et comment y parvenir...
-                </p>
-                <a href="#" class="link mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal3">Lire la suite</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Fin section blog -->
-    <!-- Modales pour les articles du blog -->
-    <!-- Modal 1 -->
-    <div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="blogModal1Label" style="color: #3f396d;">Mon parcours dans le développement web</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-          </div>
-          <div class="modal-body">
-            <img src="images/blog-post1.png" class="img-fluid rounded mb-3" alt="Image article 1">
-            <small class="text-muted">Par Ibrahim | 8 mars 2024</small>
-            <div class="social-links mt-2 mb-3">
-              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Partager</a>
-              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Partager</a>
-            </div>
-            <p>Voici le contenu complet de votre premier article de blog. Racontez votre parcours, les défis rencontrés et ce que vous avez appris. Rendez-le engageant et personnel !</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eros a tellus auctor, nec suscipit nunc dignissim. Ut suscipit gravida augue sed elementum. Sed sed luctus nisl. Donec scelerisque nisi in sodales mattis. Vestibulum suscipit odio ac enim blandit sollicitudin.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="modal fade" id="blogModal2" tabindex="-1" aria-labelledby="blogModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="blogModal2Label" style="color: #3f396d;">Top 5 des frameworks JavaScript en 2024</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-          </div>
-          <div class="modal-body">
-            <img src="images/blog-post2.png" class="img-fluid rounded mb-3" alt="Image article 2">
-            <small class="text-muted">Par Ibrahim | 15 avril 2024</small>
-            <div class="social-links mt-2 mb-3">
-              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Partager</a>
-              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Partager</a>
-            </div>
-            <p>Contenu complet pour votre deuxième article. Parlez de React, Vue, Angular, Svelte, etc. Donnez les avantages, inconvénients et vos avis personnels.</p>
-            <p>Aliquam ultrices sem quis urna placerat interdum. Etiam rutrum, quam sagittis tristique mollis, libero arcu scelerisque erat, eget tincidunt eros diam quis nunc. Sed vitae feugiat magna. Integer quis justo nec arcu laoreet facilisis.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-<!-- Modal 3 -->
-<div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="blogModal3Label" style="color: #3f396d;">L'importance du design responsive</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/il_1080xN.4341389135_on60.jpg" class="img-fluid rounded mb-3" alt="Image article 3">
-        <small class="text-muted">Par Ibrahim | 20 mai 2024</small>
-        <div class="social-links mt-2 mb-3">
-          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-twitter"></i> Partager</a>
-          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill me-1"><i class="bi bi-linkedin"></i> Partager</a>
-        </div>
-        <p>Contenu complet pour votre troisième article. Expliquez ce qu'est le design responsive, pourquoi il est crucial pour l'expérience utilisateur et le SEO. Ajoutez des conseils ou exemples.</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- Exemple de formulaire -->
-<!-- Section contact -->
-<section id="contact">
-  <form id="contactForm" action="https://formspree.io/f/xrbqdran" method="POST">
-    <label for="name">Nom</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Adresse Email</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
-    <!-- Fin section contact -->
-
-    <!-- Bouton retour en haut -->
-    <button
-      type="button"
-      class="btn btn-lg rounded-pill"
-      id="btn-back-to-top"
-      style="background-color: var(--orange-color); color: white;"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
-
-   <!-- Pied de page -->
-<footer class="text-center py-5" style="background-color: #3f396d; color: #f0f0f0;">
-  <div class="container">
-    <h3 class="text-white pt-4" data-aos="fade-up">IBRAHIM</h3>
-    <div class="link-group mt-4" data-aos="fade-up">
-      <a href="#accueil" class="text-white text-decoration-none mx-2">Accueil</a>
-      <span class="text-white-50">|</span>
-      <a href="#apropos" class="text-white text-decoration-none mx-2">À propos</a>
-      <span class="text-white-50">|</span>
-      <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
-    </div>
-    <div class="social-links mt-4" data-aos="fade-up">
-      <a href="https://www.linkedin.com/in/TON_PROFIL_LINKEDIN" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.facebook.com/" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/TON_PROFIL_INSTAGRAM" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://wa.me/TON_NUMERO_WHATSAPP_INTERNATIONAL" style="color: rgb(27, 189, 62);" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.youtube.com/channel/TON_ID_CHAINE_YOUTUBE" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill footer-social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
-    </div>
-    <hr class="my-4" style="border-color: rgba(255,255,255,0.2);" />
-    <p class="mb-0"> <span id="currentYear" style="color: rgb(120, 172, 37);"></span> IBRAHIM-ATTOUMANI | Tous droits réservés.</p>
-  </div>
-</footer>
-<!-- Fin pied de page -->
+    </footer>
+    <!-- Fin pied de page -->
 
     <!-- Lien CDN Bootstrap JS -->
     <script
