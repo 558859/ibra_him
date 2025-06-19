@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>UERNG - Union Estudiantine de la Région de Nyumakélé en Guinée</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+    .logo-img {
+      max-width: 140px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(63,57,109,0.10);
+      background: #fff;
+      padding: 8px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(63,57,109,0.07);
+      padding: 32px 24px;
+    }
+    h1 {
+      color: #3f396d;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      color: #fd7e14;
+      text-align: center;
+      margin-bottom: 1.5em;
+      font-size: 1.3em;
+      font-weight: 500;
+    }
+    h3 {
+      color: #3f396d;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    .preambule {
+      background: #f3f6fa;
+      border-left: 5px solid #fd7e14;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 2em;
+    }
+    .preamble-title {
+      font-weight: bold;
+      color: #fd7e14;
+      margin-bottom: 0.8em;
+      font-size: 1.1em;
+    }
+    .uerng-section h3 {
+      color: #fd7e14;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
+    .uerng-section ul {
+      padding-left: 1.2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 2em 0;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(63,57,109,0.07);
+      background: #eee;
+    }
+    .videos {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2em 0;
+    }
+    .videos iframe, .videos video {
+      width: 350px;
+      height: 200px;
+      border-radius: 8px;
+      border: none;
+      background: #000;
+    }
+    .testimonials {
+      margin: 2em 0;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .testimonial {
+      background: linear-gradient(90deg, #f8f9fa 60%, #fffbe6 100%);
+      border-left: 6px solid #fd7e14;
+      border-radius: 12px;
+      padding: 28px 32px;
+      box-shadow: 0 4px 24px rgba(63,57,109,0.08);
+      position: relative;
+      transition: box-shadow 0.3s;
+    }
+    .testimonial:hover {
+      box-shadow: 0 8px 32px rgba(63,57,109,0.16);
+    }
+    .testimonial-stars {
+      color: #ffb400;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: #3f396d;
+      margin-bottom: 14px;
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: #fd7e14;
+      text-align: right;
+      font-size: 1em;
+    }
+    .blog-section {
+      margin: 3em 0;
+    }
+    .blog-section h2 {
+      text-align: center;
+      color: #3f396d;
+      margin-bottom: 2em;
+    }
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .blog-card {
+      display: flex;
+      background: #f8f9fa;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(63,57,109,0.07);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 6px 24px rgba(63,57,109,0.13);
+    }
+    .blog-img {
+      width: 180px;
+      height: 140px;
+      object-fit: cover;
+      background: #eee;
+    }
+    .blog-content {
+      padding: 18px 24px;
+      flex: 1;
+    }
+    .blog-content h3 {
+      margin-top: 0;
+      color: #fd7e14;
+      margin-bottom: 0.5em;
+    }
+    .blog-date {
+      font-size: 0.95em;
+      color: #3f396d;
+      margin-bottom: 0.7em;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      background: #fd7e14;
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 2em;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #3f396d;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 12px 4px; }
+      .gallery img, .videos iframe, .videos video { width: 100%; height: 180px; }
+      .videos { flex-direction: column; gap: 16px; }
+      .blog-card { flex-direction: column; align-items: center; }
+      .blog-img { width: 100%; height: 180px; }
+      .blog-content { padding: 14px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="images/logo-uerng.png" alt="Logo UERNG" class="logo-img">
+  </div>
+  <div class="container">
+    <h1>Domination : Union Estudiantine de la Région de Nyumakélé en Guinée (UERNG)</h1>
+    <h2>Solidarité &ndash; Éducation &ndash; Développement</h2>
+
+    <div class="preambule">
+      <div class="preamble-title">Préambule</div>
+      <p>
+        À l'issue de deux (2) rencontres organisées par l'ensemble des étudiants de la région de Nyumakélé résidant à Conakry, capitale de la République de Guinée, plus précisément dans la commune de Ratoma, quartier Sonfonia Centre I, secteur II, l'idée primordiale de cette rencontre était placée dans le but de promouvoir une solidarité fraternelle fiable, renforcer nos capacités intellectuelles vis-à-vis de notre bien-être sur le sol guinéen, mais également contribuer à un développement durable de notre vaste région.
+      </p>
+      <p>
+        Après les interventions des uns et des autres lors d'un pique-nique tenu le 08 août toujours à Sonfonia Centre I, une association avec laquelle sa dénomination ci-dessous a été mise en place le 25 septembre 2021.
+      </p>
+      <p>
+        Le règlement intérieur de cette structure a été adopté devant l'Assemblée générale tenue à Sonfonia par l'ensemble de l'UERNG et dont les règles de ce RI préciseront les modalités de fonctionnement des membres de l'association et du comité de pilotage et d'exécution (CPE).
+      </p>
+      <p>
+        Cette organisation reste scrupuleusement attachée au respect des statuts et règlement intérieur de la communauté des élèves et étudiants comoriens en Guinée.
+      </p>
+    </div>
+
+    <section class="uerng-section">
+      <h3>Historique</h3>
+      <p>
+        L’UERNG a été créée pour rassembler les étudiants et ressortissants de Nyumakele en Grande Comore, afin de favoriser l’entraide, la réussite et la valorisation de leur patrimoine culturel.
+      </p>
+
+      <h3>Missions</h3>
+      <ul>
+        <li>Accompagner les étudiants dans leur parcours académique et professionnel.</li>
+        <li>Organiser des activités culturelles, éducatives et sociales.</li>
+        <li>Promouvoir la solidarité et l’entraide entre les membres.</li>
+        <li>Valoriser l’histoire et la culture de Nyumakele.</li>
+      </ul>
+
+      <h3>Activités</h3>
+      <p>
+        L’UERNG organise régulièrement des conférences, ateliers, sorties culturelles, et actions de soutien pour ses membres.
+      </p>
+
+      <h3>Membres</h3>
+      <p>
+        L’association regroupe des étudiants, des professionnels et des sympathisants attachés à Nyumakele et à ses valeurs.
+      </p>
+    </section>
+
+    <!-- Galerie photos -->
+    <h3>Galerie Photos</h3>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <!-- Ajoute d'autres images ici -->
+    </div>
+
+    <!-- Vidéos -->
+    <h3>Vidéos</h3>
+    <div class="videos">
+      <!-- Exemple avec YouTube -->
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <!-- Exemple avec un fichier vidéo local -->
+      <video controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
+
+    <!-- Témoignages élégants avec étoiles -->
+    <h3>Témoignages</h3>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="testimonial-stars">
+          ★★★★★
+        </div>
+        <p class="testimonial-text">« L’UERNG m’a permis de réussir mes études et de me sentir soutenu loin de chez moi. »</p>
+        <div class="testimonial-author">— Fatima, étudiante</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">
+          ★★★★☆
+        </div>
+        <p class="testimonial-text">« Grâce à l’association, j’ai pu participer à des activités enrichissantes et rencontrer d’autres étudiants comoriens. »</p>
+        <div class="testimonial-author">— Ahmed, membre actif</div>
+      </div>
+      <!-- Ajoute d'autres témoignages ici -->
+    </div>
+
+    <!-- Blog & Articles -->
+    <section class="blog-section">
+      <h2>Dernières actualités – Blog & Articles</h2>
+      <div class="blog-list">
+
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <img src="images/rentree-2025.jpg" alt="Rentrée universitaire" class="blog-img">
+          <div class="blog-content">
+            <h3>La rentrée universitaire 2025 : nos membres se mobilisent !</h3>
+            <div class="blog-date">Septembre 2025</div>
+            <p>
+              L’UERNG souhaite une excellente rentrée à tous les étudiants. Cette année, de nouveaux projets seront lancés pour accompagner les étudiants de Nyumakélé en Guinée Conakry : groupes d'entraide, tutorats, sorties culturelles... Restons solidaires et unis !
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <img src="images/formation-aguip.jpg" alt="Formation AGUIP" class="blog-img">
+          <div class="blog-content">
+            <h3>Retour sur notre participation à la formation AGUIP</h3>
+            <div class="blog-date">Août 2025</div>
+            <p>
+              Plusieurs membres de l’UERNG ont eu la chance de participer à une formation professionnelle organisée par l’AGUIP. Une expérience enrichissante où nous avons découvert les bases de l’intelligence artificielle, des compétences en communication, et des outils pour mieux s’insérer dans le monde du travail.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <img src="images/session-jci.jpg" alt="Session JCI" class="blog-img">
+          <div class="blog-content">
+            <h3>Leadership et engagement : retour sur la session JCI</h3>
+            <div class="blog-date">Juillet 2025</div>
+            <p>
+              Dans le cadre de la collaboration avec JCI Guinée Conakry, des membres de l’UERNG ont participé à des ateliers sur le leadership, la citoyenneté active et l’entrepreneuriat jeune. Une opportunité qui renforce notre mission : former une jeunesse consciente et engagée.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <img src="images/temoignage-etudiant.jpg" alt="Témoignage étudiant" class="blog-img">
+          <div class="blog-content">
+            <h3>Témoignage étudiant : vivre à Conakry en tant que Comorien</h3>
+            <div class="blog-date">Juin 2025</div>
+            <p>
+              “Au début, ce n’était pas facile, mais avec l’UERNG, je me suis senti chez moi. On s’entraide, on partage nos difficultés, et on avance ensemble.” – Découvrez le témoignage de Ahamada, étudiant en 2e année MIAGE.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card">
+          <img src="images/soiree-culturelle.jpg" alt="Soirée interculturelle" class="blog-img">
+          <div class="blog-content">
+            <h3>Culture comorienne à l’honneur lors de notre soirée interculturelle</h3>
+            <div class="blog-date">Mai 2025</div>
+            <p>
+              Une soirée exceptionnelle a été organisée par l’UERNG pour faire découvrir la richesse de la culture comorienne : musique, danses traditionnelles, mets locaux, et tenues culturelles. Un moment de fierté et de partage entre étudiants africains.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card">
+          <img src="images/bibliotheque-numerique.jpg" alt="Bibliothèque numérique" class="blog-img">
+          <div class="blog-content">
+            <h3>Projet en cours : mise en place d’une bibliothèque numérique UERNG</h3>
+            <div class="blog-date">Avril 2025</div>
+            <p>
+              L’UERNG travaille actuellement sur un projet de bibliothèque numérique pour permettre aux étudiants d’accéder facilement à des ressources pédagogiques, livres PDF, cours, et mémoires en ligne. Le lancement est prévu dans les mois à venir.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <a href="index.html" class="btn">Retour à l’accueil</a>
+  </div>
+</body>
+</html>
