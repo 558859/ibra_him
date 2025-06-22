@@ -56,60 +56,101 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
-    <!-- Début de la barre de navigation -->
-    <nav
-      id="navbar-top"
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
-    >
-      <div class="container-fluid px-lg-5 px-3">
-        <a class="navbar-brand fw-bold fs-2" href="#accueil" style="color: #3f396d"
-          >IBRAHIM</a
-        >
-        <button
-          class="navbar-toggler nav-menu"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Basculer la navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-lg-4 gap-2" style="font-size: 1.1rem">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#accueil">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#apropos">À propos</a>
-            </li>
-            <li class="nav-item">
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#temoignages">Témoignages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-             <a class="nav-link" href="uerng.html">UERNG</a>
-</li>
-            <li class="nav-item d-lg-none">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <a href="#contact" class="c-btn ms-lg-4 py-2 px-4 rounded-pill d-none d-lg-block text-white text-decoration-none">Contact</a>
+   <!-- À placer dans le <body> de index.html, en haut de page -->
+<!-- Barre de navigation responsive avec menu offcanvas à droite -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="navbar-top">
+  <div class="container-fluid px-lg-5 px-3">
+    <a class="navbar-brand fw-bold fs-3" href="#accueil" style="color: #3f396d;">IBRAHIM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
       </div>
-    </nav>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="uerng.html">Uerng</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Menu offcanvas vertical étroit à droite sur mobile/tablette */
+  @media (max-width: 991.98px) {
+    .offcanvas.offcanvas-end {
+      width: 220px !important;           /* Largeur du menu mobile */
+      max-width: 80vw;
+      height: 100vh !important;          /* Prend toute la hauteur de l'écran */
+      background: rgba(253, 126, 20, 0.85) !important; /* orange semi-transparent */
+      backdrop-filter: blur(6px);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0.8em;
+      border-bottom-left-radius: 0.8em;
+    }
+    .offcanvas .nav-link {
+      color: #fff !important;
+    }
+    .offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
+      border-right: 3px solid #fff;
+      border-bottom: none;
+      color: #3f396d !important;
+      background: rgba(255,255,255,0.10);
+      transition: border 0.2s;
+    }
+  }
+
+  /* Sur PC (écran large), menu horizontal classique */
+  @media (min-width: 992px) {
+    .offcanvas.offcanvas-end {
+      position: static;
+      width: auto !important;
+      max-width: none;
+      height: auto !important;
+      background: transparent !important;
+      backdrop-filter: none;
+      border-radius: 0;
+    }
+    .navbar-nav .nav-link {
+      color: #3f396d !important;
+      border: none;
+      background: none;
+      padding: 0.5em 1em;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+      border-bottom: 2.5px solid #fd7e14;
+      color: #fd7e14 !important;
+      background: none;
+      border-right: none;
+    }
+  }
+</style>
+
+
+
+
+
+<!-- Ajoute ce script juste après la navbar pour activer le soulignement automatique -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
     <!-- Fin de la barre de navigation -->
 
     <!-- Section accueil -->
@@ -162,7 +203,7 @@
                 <p class="text-muted">
                   Création d'interfaces attrayantes et intuitives.
                 </p>
-                <a href="#" class="link">En savoir plus</a>
+                <a href="web-design.html" class="link">En savoir plus</a>
               </div>
             </div>
           </div>
@@ -181,7 +222,7 @@
                 <p class="text-muted">
                   Création d'applications web robustes et évolutives.
                 </p>
-                <a href="#" class="link">En savoir plus</a>
+                <a href="developpement-web.html" class="link">En savoir plus</a>
               </div>
             </div>
           </div>
@@ -200,7 +241,7 @@
                 <p class="text-muted">
                   Débogage et optimisation du code pour de meilleures performances.
                 </p>
-                <a href="#" class="link">En savoir plus</a>
+                <a href="resolution-problemes.html" class="link">En savoir plus</a>
               </div>
             </div>
           </div>
@@ -295,7 +336,7 @@
 
         <div id="myBtnContainer" class="text-center mb-4">
           <button class="filter-item btn btn-outline-primary active" data-filter="all">Tous</button>
-          <button class="filter-item btn btn-outline-primary" data-filter="game">Jeu</button>
+          <button class="filter-item btn btn-outline-primary" data-filter="game">Dagi_Anjouan</button>
           <button class="filter-item btn btn-outline-primary" data-filter="webapp">Application Web</button>
           <button class="filter-item btn btn-outline-primary" data-filter="website">Site Web</button>
         </div>
@@ -306,11 +347,11 @@
               <div class="card shadow-sm">
                 <img src="images/basketball.png.jpeg" class="card-img-top" alt="Projet 2048" />
                 <div class="card-body text-center">
-                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Clone du jeu 2048</h4>
-                  <span class="badge bg-secondary">HTML</span>
-                  <span class="badge bg-secondary">CSS</span>
-                  <span class="badge bg-secondary mb-2">JavaScript</span><br />
-                  <a href="#" class="link mt-2 d-inline-block">Voir le projet</a>
+                  <h4 class="card-title fw-semibold" style="color: #3f396d;">Hommage à Dagi</h4>
+                  <span class="badge bg-secondary">Dagi</span>
+                  <span class="badge bg-secondary">un lieu</span>
+                  <span class="badge bg-secondary mb-2">une inspiration.</span><br />
+                  <a href="dagi-anjouan.html" class="link">En savoir plus</a>
                 </div>
               </div>
             </div>
@@ -647,10 +688,10 @@ Le design responsive n’est plus une option, mais une nécessité. Il joue un r
         <div class="social-links mt-4" data-aos="fade-up">
           <!-- PENSEZ À REMPLACER CES LIENS PAR VOS PROFILS -->
           <a href="https://www.linkedin.com/in/TON_PROFIL_LINKEDIN" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.facebook.com/TON_PROFIL_FACEBOOK" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/TON_PROFIL_INSTAGRAM" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://wa.me/TON_NUMERO_WHATSAPP" style="color: rgb(27, 189, 62);" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://www.youtube.com/channel/TON_ID_CHAINE_YOUTUBE" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill footer-social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.facebook.com/" style="color: #a2a0b1;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/+224 669253007" style="color: rgb(27, 189, 62);" target="_blank" class="btn btn-outline-light rounded-pill me-2 footer-social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.youtube.com/" style="color: #e44850;" target="_blank" class="btn btn-outline-light rounded-pill footer-social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
         </div>
         <hr class="my-4" style="border-color: rgba(255,255,255,0.2);" />
         <p class="mb-0">© <span id="currentYear"></span> IBRAHIM-ATTOUMANI | Tous droits réservés.</p>
