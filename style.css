@@ -139,3 +139,18 @@ body {
 /* Pied de page (Footer) */
 footer { background-color: var(--primary-dark-color); color: #f0f0f0; }
 .footer-social-btn:hover { background-color: var(--orange-color) !important; border-color: var(--orange-color) !important; color: white !important; }
+
+
+
+@media (max-width: 991.98px) {
+  .offcanvas .navbar-nav .nav-link {
+    font-size: 1rem;           /* Diminue la taille du texte */
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.1em;      /* Réduit l'espacement entre les liens */
+  }
+  .offcanvas .navbar-nav {
+    gap: 0 !important;         /* Supprime l'espacement vertical entre les éléments */
+  }
+}
+
