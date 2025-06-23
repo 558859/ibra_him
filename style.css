@@ -28,8 +28,7 @@ body {
 .navbar-toggler { border: none; }
 .navbar-toggler:focus { box-shadow: none; }
 
-
-/* Styles du menu mobile (Offcanvas) - CORRIGÉ */
+/* Styles du menu mobile (Offcanvas) - UNIQUE ET CORRIGÉ */
 @media (max-width: 991.98px) {
   .offcanvas.offcanvas-end {
     width: 220px !important;
@@ -44,34 +43,40 @@ body {
     border-bottom-right-radius: 0;
     border-top-left-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
+    overflow: hidden !important;
   }
-  
+
   .offcanvas-header {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .offcanvas-header .btn-close {
-    background-color: #fff; /* Pour une meilleure visibilité sur fond orange */
+    background-color: #fff;
   }
-  
+
   .offcanvas-body {
-    flex-grow: 1; 
-    padding: 0; 
+    flex: 1 1 auto;
+    overflow-y: auto !important;
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .offcanvas-body .navbar-nav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 0 !important;
   }
 
   .offcanvas .nav-link {
     color: #fff !important;
-    padding: 0.8rem 1.5rem;
+    padding: 0.4em 1.2em;
+    font-size: 1rem;
     font-weight: 500;
+    margin-bottom: 0.1em;
   }
 
   .offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
@@ -83,20 +88,19 @@ body {
   }
 }
 
-
 /* Styles du menu sur grand écran */
 @media (min-width: 992px) {
   #navbar-top .nav-link {
     color: #fff !important;
     font-weight: 500;
     padding: 0.8rem 1rem;
-    border-bottom: 2.5px solid transparent; /* Bordure transparente par défaut */
+    border-bottom: 2.5px solid transparent;
     transition: all 0.3s ease;
   }
   #navbar-top .nav-link:hover,
   #navbar-top .nav-link.active {
     color: #3f396d !important;
-    border-bottom-color: #3f396d; /* La bordure devient visible */
+    border-bottom-color: #3f396d;
   }
 }
 
@@ -139,45 +143,3 @@ body {
 /* Pied de page (Footer) */
 footer { background-color: var(--primary-dark-color); color: #f0f0f0; }
 .footer-social-btn:hover { background-color: var(--orange-color) !important; border-color: var(--orange-color) !important; color: white !important; }
-
-
-
-@media (max-width: 991.98px) {
-  .offcanvas .navbar-nav .nav-link {
-    font-size: 1rem;           /* Diminue la taille du texte */
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-    margin-bottom: 0.1em;      /* Réduit l'espacement entre les liens */
-  }
-  .offcanvas .navbar-nav {
-    gap: 0 !important;         /* Supprime l'espacement vertical entre les éléments */
-  }
-}
-
-
-
-
-
-@media (max-width: 991.98px) {
-  .offcanvas.offcanvas-end {
-    width: 220px !important;
-    max-width: 80vw;
-    height: 100vh !important;
-    background: rgba(253, 126, 20, 0.85) !important;
-    backdrop-filter: blur(6px);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0.8em;
-    border-bottom-left-radius: 0.8em;
-    overflow-y: auto; /* <-- Ajoute cette ligne */
-  }
-  .offcanvas .navbar-nav .nav-link {
-    font-size: 1rem;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-    margin-bottom: 0.1em;
-  }
-  .offcanvas .navbar-nav {
-    gap: 0 !important;
-  }
-}
