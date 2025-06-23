@@ -154,3 +154,30 @@ footer { background-color: var(--primary-dark-color); color: #f0f0f0; }
   }
 }
 
+
+
+
+
+@media (max-width: 991.98px) {
+  .offcanvas.offcanvas-end {
+    width: 220px !important;
+    max-width: 80vw;
+    height: 100vh !important;
+    background: rgba(253, 126, 20, 0.85) !important;
+    backdrop-filter: blur(6px);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    overflow-y: auto; /* <-- Ajoute cette ligne */
+  }
+  .offcanvas .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.1em;
+  }
+  .offcanvas .navbar-nav {
+    gap: 0 !important;
+  }
+}
