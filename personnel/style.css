@@ -1,0 +1,145 @@
+/* Google Font et styles de base */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.7;
+  color: #555;
+}
+
+:root {
+  --primary-dark-color: #3f396d;
+  --orange-color: #fd7e14;
+  --light-bg-color: #f8f9fa;
+}
+
+/* Classes utilitaires */
+.c-orange { color: var(--orange-color) !important; }
+.link { color: var(--orange-color); text-decoration: none; font-weight: 600; }
+.link:hover { color: var(--primary-dark-color); text-decoration: underline; }
+
+/* Styles de la barre de navigation (Navbar) */
+#navbar-top {
+  background: linear-gradient(90deg, #ff7e29 0%, #e7810b 100%) !important;
+  box-shadow: 0 2px 16px rgba(63,57,109,0.07);
+}
+#navbar-top .navbar-brand {
+  letter-spacing: 1px;
+  color: #fff !important;
+}
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { box-shadow: none; }
+
+/* Styles du menu mobile (Offcanvas) - UNIQUE ET CORRIGÉ */
+@media (max-width: 991.98px) {
+  .offcanvas.offcanvas-end {
+    width: 220px !important;
+    max-width: 80vw;
+    height: 100vh !important;
+    background: rgba(253, 126, 20, 0.95) !important;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    border-left: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    overflow: hidden !important;
+  }
+
+  .offcanvas-header {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .offcanvas-header .btn-close {
+    background-color: #fff;
+  }
+
+  .offcanvas-body {
+    flex: 1 1 auto;
+    overflow-y: auto !important;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .offcanvas-body .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+
+  .offcanvas .nav-link {
+    color: #fff !important;
+    padding: 0.4em 1.2em;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.1em;
+  }
+
+  .offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
+    border-right: 4px solid #fff;
+    border-bottom: none;
+    font-weight: bold;
+    background: rgba(63, 57, 109, 0.3);
+    transition: all 0.2s;
+  }
+}
+
+/* Styles du menu sur grand écran */
+@media (min-width: 992px) {
+  #navbar-top .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border-bottom: 2.5px solid transparent;
+    transition: all 0.3s ease;
+  }
+  #navbar-top .nav-link:hover,
+  #navbar-top .nav-link.active {
+    color: #3f396d !important;
+    border-bottom-color: #3f396d;
+  }
+}
+
+/* Boutons principaux */
+.c-btn, .h-btn {
+  background: linear-gradient(90deg, #ff7e29 0%, #101011 100%);
+  border: none;
+  color: #fff !important;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 20px rgba(63,57,109,0.07);
+}
+.c-btn:hover, .h-btn:hover {
+  background: linear-gradient(90deg, #2f3064 0%, #ff7e29 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(63,57,109,0.13);
+}
+
+/* Section Accueil */
+.home { min-height: 80vh; display: flex; align-items: center; }
+.home h2 { font-size: 2.5rem; font-weight: 700; }
+@media (min-width: 768px) { .home h2 { font-size: 3.5rem; } }
+
+/* Sections générales */
+.expertise, .skill, .portfolio, .testimonial, .blog, #contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Compétences (Skill) */
+.circular-progress { position: relative; height: 150px; width: 150px; border-radius: 50%; background: conic-gradient(var(--orange-color) 0deg, #ededed 0deg); display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0px 5px 15px rgba(0,0,0,0.1); }
+.circular-progress::before { content: ""; position: absolute; height: 120px; width: 120px; border-radius: 50%; background-color: #fff; }
+.progress-value { position: relative; font-size: 1.8rem; font-weight: 600; color: var(--primary-dark-color); }
+
+/* Portfolio et Blog */
+.post .card-img-top, .blogpost .card-img-top { height: 250px; object-fit: cover; }
+
+/* Témoignages (Testimonial) */
+.stars { color: #ffb400; font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+/* Pied de page (Footer) */
+footer { background-color: var(--primary-dark-color); color: #f0f0f0; }
+.footer-social-btn:hover { background-color: var(--orange-color) !important; border-color: var(--orange-color) !important; color: white !important; }
