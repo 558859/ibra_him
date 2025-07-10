@@ -163,4 +163,13 @@ $(document).ready(function () {
   if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
   }
+
+
+  AOS.init({
+    duration: 1000,
+    offset: 50,
+    once: true
+  });
+  // Votre autre code JS...
+
 });

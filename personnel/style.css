@@ -16,7 +16,11 @@ body {
 .link { color: var(--orange-color); text-decoration: none; font-weight: 600; }
 .link:hover { color: var(--primary-dark-color); text-decoration: underline; }
 
-/* Styles de la barre de navigation (Navbar) */
+/* 
+================================================================
+  STYLES DE LA BARRE DE NAVIGATION (NAVBAR)
+================================================================
+*/
 #navbar-top {
   background: linear-gradient(90deg, #ff7e29 0%, #e7810b 100%) !important;
   box-shadow: 0 2px 16px rgba(63,57,109,0.07);
@@ -25,70 +29,74 @@ body {
   letter-spacing: 1px;
   color: #fff !important;
 }
-.navbar-toggler { border: none; }
-.navbar-toggler:focus { box-shadow: none; }
+.navbar-toggler {
+  border: none;
+  /* Amélioration : Assure que l'icône hamburger est bien blanche sur le fond orange */
+  filter: brightness(0) invert(1);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
-/* Styles du menu mobile (Offcanvas) - UNIQUE ET CORRIGÉ */
+/* 
+================================================================
+  STYLES DU MENU MOBILE (OFFCANVAS) - SECTION CORRIGÉE
+================================================================
+*/
 @media (max-width: 991.98px) {
   .offcanvas.offcanvas-end {
-    width: 220px !important;
+    width: 250px !important;
     max-width: 80vw;
     height: 100vh !important;
-    background: rgba(253, 126, 20, 0.95) !important;
+    background: rgba(232, 126, 36, 0.98) !important;
     backdrop-filter: blur(8px);
-    display: flex;
-    flex-direction: column;
     border-left: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     border-top-left-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
-    overflow: hidden !important;
+    
+    /* === CORRECTION PRINCIPALE === */
+    /* La ligne 'display: flex' a été SUPPRIMÉE pour que le menu puisse se cacher par défaut. */
+    /* La ligne 'overflow: hidden' a aussi été retirée car Bootstrap gère déjà le scroll. */
   }
 
   .offcanvas-header {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
   }
 
+  /* Amélioration : Rend la croix (X) bien blanche et visible sur le fond orange */
   .offcanvas-header .btn-close {
-    background-color: #fff;
+    filter: invert(1) grayscale(100%) brightness(200%);
   }
 
   .offcanvas-body {
-    flex: 1 1 auto;
-    overflow-y: auto !important;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .offcanvas-body .navbar-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0 !important;
+    padding: 0.5rem 0; /* Ajoute un peu d'air en haut et en bas de la liste */
   }
 
   .offcanvas .nav-link {
     color: #fff !important;
-    padding: 0.4em 1.2em;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 0.1em;
   }
 
-  .offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
+  .offcanvas .nav-link.active,
+  .offcanvas .nav-link:hover {
     border-right: 4px solid #fff;
     border-bottom: none;
     font-weight: bold;
-    background: rgba(63, 57, 109, 0.3);
-    transition: all 0.2s;
+    color: var(--primary-dark-color) !important;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
   }
 }
 
-/* Styles du menu sur grand écran */
+/* 
+================================================================
+  STYLES DU MENU SUR GRAND ÉCRAN (DESKTOP)
+================================================================
+*/
 @media (min-width: 992px) {
   #navbar-top .nav-link {
     color: #fff !important;
@@ -99,8 +107,8 @@ body {
   }
   #navbar-top .nav-link:hover,
   #navbar-top .nav-link.active {
-    color: #3f396d !important;
-    border-bottom-color: #3f396d;
+    color: var(--primary-dark-color) !important;
+    border-bottom-color: var(--primary-dark-color);
   }
 }
 
@@ -109,21 +117,20 @@ body {
   background: linear-gradient(90deg, #ff7e29 0%, #101011 100%);
   border: none;
   color: #fff !important;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(63,57,109,0.07);
 }
 .c-btn:hover, .h-btn:hover {
   background: linear-gradient(90deg, #2f3064 0%, #ff7e29 100%);
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(63,57,109,0.13);
 }
 
-/* Section Accueil */
+/* Sections */
 .home { min-height: 80vh; display: flex; align-items: center; }
 .home h2 { font-size: 2.5rem; font-weight: 700; }
 @media (min-width: 768px) { .home h2 { font-size: 3.5rem; } }
 
-/* Sections générales */
 .expertise, .skill, .portfolio, .testimonial, .blog, #contact {
   padding-top: 80px;
   padding-bottom: 80px;
