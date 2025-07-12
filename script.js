@@ -175,12 +175,3 @@ $(document).ready(function () {
 });
 
 
-
-function openMenu() {
-  document.getElementById('side-menu').classList.add('open');
-  document.getElementById('burger').style.display = 'none';
-}
-function closeMenu() {
-  document.getElementById('side-menu').classList.remove('open');
-  document.getElementById('burger').style.display = 'flex';
-}
