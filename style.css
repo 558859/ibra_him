@@ -143,3 +143,44 @@ body {
 /* Pied de page (Footer) */
 footer { background-color: var(--primary-dark-color); color: #f0f0f0; }
 .footer-social-btn:hover { background-color: var(--orange-color) !important; border-color: var(--orange-color) !important; color: white !important; }
+
+
+.burger-menu {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.burger-menu span {
+  height: 5px;
+  background: #fff;     /* Couleur blanche sur fond gris */
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+.burger-menu:hover span {
+  background: #ffa726;  /* Couleur orange au hover */
+}
+
+.side-menu {
+  display: none;        /* Caché par défaut */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: #e67a22;
+  z-index: 10;
+  /* animation possible ici */
+}
+.side-menu.open {
+  display: block;
+}
+.close-menu {
+  cursor: pointer;
+  float: right;
+  font-size: 2em;
+  color: #fff;
+}
